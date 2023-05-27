@@ -6,6 +6,7 @@ This project is a web application built using Flask, a Python web framework. The
 
 
 ## Project Structure
+```
 ├── README.md
 ├── app.py
 ├── requirements.txt
@@ -16,6 +17,7 @@ This project is a web application built using Flask, a Python web framework. The
 │   └── screen_info.js
 └── templates
     └── index.html
+```
 
 
 * `app.py` is the main Python file that contains the Flask application code.
@@ -26,10 +28,10 @@ This project is a web application built using Flask, a Python web framework. The
 ## Functionality
 The application consists of multiple JavaScript files that fetch and present different types of information:
 
-`browser_info.js` retrieves and displays the visitor's browser information, such as the browser name, version, and rendering engine.
-`hardware.js` retrieves and displays the visitor's hardware information, including device type, model, brand, CPU architecture, memory (RAM), GPU information, battery status, APU, device pointing method, and maximum touch points.
-`ip_info.js` retrieves and displays the visitor's IP information, including the source IP, foundation, intranet IP, source location, request IP, request location, ISP, IP hostname, and flags indicating if the IP is a proxy, Tor, VPN, or cloud server.
-`screen_info.js` retrieves and displays the visitor's screen information, such as the screen width, height, pixel ratio, and color depth.
+1. `browser_info.js` retrieves and displays the visitor's browser information, such as the browser name, version, and rendering engine.
+2. `hardware.js` retrieves and displays the visitor's hardware information, including device type, model, brand, CPU architecture, memory (RAM), GPU information, battery status, APU, device pointing method, and maximum touch points.
+3. `ip_info.js` retrieves and displays the visitor's IP information, including the source IP, foundation, intranet IP, source location, request IP, request location, ISP, IP hostname, and flags indicating if the IP is a proxy, Tor, VPN, or cloud server.
+4. `screen_info.js` retrieves and displays the visitor's screen information, such as the screen width, height, pixel ratio, and color depth.
 
 The Flask application integrates these JavaScript files into the HTML template (`index.html`), resulting in a web page that dynamically presents the visitor's computer information.
 
@@ -41,7 +43,7 @@ To use this application, you will need to obtain API keys for two external servi
 2. Open the `.env` file in a text editor.
 3. Add the following lines to the file, replacing 'YOURS' with your actual API keys:
 
-```
+```.env
 # ProxyCheck.io
 PROXYCHECK_API_KEY = 'YOURS'
 
