@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Information</title>
+</head>
+<body>
+    <div id="udid"></div>
+    
+    <h1>Hardware Information</h1>
+    <div id="hardwareInfo"></div>
+    <script src="{{ url_for('static', filename='hardware.js') }}"></script>
+
+    <h1>System Information</h1>
+    <div id="systemInfo">
+        {% for key, value in system_info.items() %}
+            <p>{{ key }}: {{ value }}</p>
+        {% endfor %}
+    </div>
+    <div id="screenInfo"></div>
+    <script src="{{ url_for('static',filename='screen_info.js') }}"></script>
+
+    <h1>Browser Information</h1>
+    <div id="browserInfo"></div>
+    <script src="{{ url_for('static',filename='browser_info.js') }}"></script>
+
+    <h1>IP Information</h1>
+    <div id="ipInfo"></div>
+    <script src="{{ url_for('static',filename='ip_info.js') }}"></script>
+
+</body>
+</html>
